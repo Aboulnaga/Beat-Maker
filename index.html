@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+      integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+      defer
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>BeatMakers</title>
+  </head>
+  <body>
+    <div class="beatmaker-container container-flex-box">
+      <div class="beat-maker-tracks beat-makers-flex-box">
+        <div class="kick">
+          <div class="kik-control">
+            <h1>Kick</h1>
+            <select class="select select-kick-track">
+              <option value="./sounds/kick-heavy.wav">Heavy</option>
+              <option value="./sounds/kick-808.wav">808</option>
+              <option value="./sounds/kick-softy.wav">Softy</option>
+              <option value="./sounds/kick-classic.wav">Classic</option>
+            </select>
+            <button class="mute mute-kick-track">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="kick-beat-tracks">
+            <div class="kick-beat-track track t0"></div>
+            <div class="kick-beat-track track t1"></div>
+            <div class="kick-beat-track track t2"></div>
+            <div class="kick-beat-track track t3"></div>
+            <div class="kick-beat-track track t4"></div>
+            <div class="kick-beat-track track t5"></div>
+            <div class="kick-beat-track track t6"></div>
+            <div class="kick-beat-track track t7"></div>
+            <div class="kick-beat-track track t8"></div>
+            <div class="kick-beat-track track t9"></div>
+          </div>
+        </div>
+        <div class="snare">
+          <div class="snare-control">
+            <h1>Snare</h1>
+            <select class="select select-snare-track">
+              <option value="./sounds/snare-808.wav">808</option>
+              <option value="./sounds/snare-acoustic01.wav">acoustic</option>
+              <option value="./sounds/snare-vinyl02.wav">viny</option>
+            </select>
+            <button class="mute mute-snare-track">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="snare-beat-tracks">
+            <div class="snare-beat-track track t0"></div>
+            <div class="snare-beat-track track t1"></div>
+            <div class="snare-beat-track track t2"></div>
+            <div class="snare-beat-track track t3"></div>
+            <div class="snare-beat-track track t4"></div>
+            <div class="snare-beat-track track t5"></div>
+            <div class="snare-beat-track track t6"></div>
+            <div class="snare-beat-track track t7"></div>
+            <div class="snare-beat-track track t8"></div>
+            <div class="snare-beat-track track t9"></div>
+          </div>
+        </div>
+        <div class="hihat">
+          <div class="snare-control">
+            <h1>Hihat</h1>
+            <select class="select select-hihat-track">
+              <option value="./sounds/hihat-808.wav">808</option>
+              <option value="./sounds/hihat-acoustic01.wav">acoustic</option>
+            </select>
+            <button class="mute mute-hihat-track">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="snare-beat-tracks">
+            <div class="hihat-beat-track track t0"></div>
+            <div class="hihat-beat-track track t1"></div>
+            <div class="hihat-beat-track track t2"></div>
+            <div class="hihat-beat-track track t3"></div>
+            <div class="hihat-beat-track track t4"></div>
+            <div class="hihat-beat-track track t5"></div>
+            <div class="hihat-beat-track track t6"></div>
+            <div class="hihat-beat-track track t7"></div>
+            <div class="hihat-beat-track track t8"></div>
+            <div class="hihat-beat-track track t9"></div>
+          </div>
+        </div>
+      </div>
+      <div class="beat-maker-control-manager">
+        <button class="play">Play</button>
+        <input class="bpm" type="range" min="70" max="490" value="210" />
+        <p>Beat Speed: <span class="bpm-value">210</span></p>
+      </div>
+    </div>
+    <audio class="kick-sound" src="./sounds/kick-heavy.wav"></audio>
+    <audio class="snare-sound" src="./sounds/snare-808.wav"></audio>
+    <audio class="hihat-sound" src="./sounds/hihat-808.wav"></audio>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: rgb(37, 37, 37);
+  --light-color: rgb(240, 240, 240);
+  --kick-color: #f25430;
+  --snare-color: #03a696;
+  --hihat-color: #035aa6;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-color);
+}
+
+.beatmaker-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-flex-box {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+/* 
+  .beat-maker-tracks {
+    padding: 0;
+  } */
+.beat-makers-flex-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  margin: 1.5rem 0.5rem;
+}
+
+.kik-control,
+.snare-control,
+.hihat-control {
+  margin-right: 3rem;
+}
+
+.kick-beat-tracks,
+.snare-beat-tracks,
+.hihat-beat-tracks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.kick-beat-track {
+  background-color: var(--kick-color);
+}
+
+.snare-beat-track {
+  background-color: var(--snare-color);
+}
+
+.hihat-beat-track {
+  background-color: var(--hihat-color);
+}
+
+.track {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.active-kick-beat-square {
+  background-color: #ac3d24;
+}
+.active-snare-beat-square {
+  background-color: #01524a;
+}
+.active-hihat-beat-square {
+  background-color: #012646;
+}
+
+.active-square-animation {
+  animation: anim 0.3s ease-in-out alternate 2;
+}
+
+@keyframes anim {
+  0% {
+    scale: 1;
+    box-shadow: 0;
+  }
+  100% {
+    scale: 1.3;
+    box-shadow: 0 14px 14px rgba(7, 7, 7, 0.7);
+  }
+}
+
+.beat-maker-control-manager {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.play {
+  background-color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border: 1px dotted var(--dark-color);
+  border-radius: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.active-play {
+  background-color: white;
+  color: red;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border: 1px dotted red;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.mute {
+  padding: 0.25rem;
+  border: 1px dotted black;
+  padding: 0.25rem;
+  background-color: white;
+}
+
+.active-mute {
+  padding: 0.25rem;
+  border: 1px dotted red;
+  padding: 0.25rem;
+  background-color: white;
+  color: red;
+}
+
+.bpm {
+  appearance: none;
+  background-color: black;
+  width: 15rem;
+  border-radius: 1rem;
+}
